@@ -1,0 +1,141 @@
+#business {
+  margin: 0 auto;
+  max-width: 1250px;
+
+  h2 {
+    text-align: center;
+    color: #444;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 60px;
+  }
+}
+
+.business_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  .business_grid_card {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    user-select: text;
+
+    &:hover .business_grid_card_hover {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:hover .business_grid_card_heading {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .business_grid_card_heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 180px;
+      padding: 30px 20px;
+      background-color: rgba(45, 54, 83, 0.6);
+      transition: .5s;
+
+      h3 {
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 100%;
+      }
+
+      .business_grid_card_chevron {
+        width: 20px;
+        height: 20px;
+        display: none;
+      }
+    }
+
+    .business_grid_card_hover {
+      opacity: 0;
+      visibility: hidden;
+      transition: .5s;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      color: white;
+      background-color: rgba(45, 54, 83, 0.6);
+
+      h4 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 100%;
+        margin: 20px;
+      }
+
+      p {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 140%;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  #business {
+    margin: 0 16px;
+  }
+  #business h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .business_grid {
+    display: flex;
+    flex-direction: column;
+
+    .business_grid_card {
+      background-position: center top;
+
+      &:hover .business_grid_card_hover,
+      &:hover .business_grid_card_heading {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .business_grid_card_heading {
+        margin-top: 0;
+
+        h3 {
+          font-size: 20px;
+        }
+
+        .business_grid_card_chevron {
+          display: block;
+          cursor: pointer;
+        }
+      }
+
+      .business_grid_card_hover {
+        h4 {
+          display: none;
+        }
+
+        p {
+          font-size: 16px;
+          padding-top: 20px;
+        }
+
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        position: static;
+        padding-bottom: 60px;
+      }
+    }
+  }
+}

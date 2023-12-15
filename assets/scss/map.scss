@@ -1,0 +1,33 @@
+#map {
+  transition: .5s;
+}
+
+.mapContainer {
+  margin: 90px auto;
+  padding: 0 20px;
+  max-width: 1250px;
+
+  > svg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #map {
+    margin: 0 16px;
+  }
+  .mapContainer {
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .mapContainer {
+    margin: 0px auto;
+    overflow-x: scroll;
+
+    > svg {
+      width: 862px;
+    }
+  }
+}

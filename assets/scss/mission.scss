@@ -1,0 +1,67 @@
+.mission {
+  background-color: #A30C33;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 140px 70px;
+  margin: 0 auto 120px;
+  max-width: 1250px;
+  position: relative;
+
+  h2 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+
+  p {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .container {
+    z-index: 1;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .right {
+    right: 0;
+  }
+
+  .left {
+    left: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #mission {
+    margin: 0 16px;
+  }
+  .mission {
+    padding: 32px 5px;
+    margin: 0 auto 60px;
+
+    h2 {
+      font-size: 28px;
+      padding-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    svg {
+      max-height: 150px;
+      max-width: 100px;
+    }
+  }
+}

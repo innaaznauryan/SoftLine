@@ -1,0 +1,27 @@
+.desc_paragraph {
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.08);
+  padding: 100px 110px;
+  margin: 100px 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #444;
+
+  span {
+    color: #B01736;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  #description {
+    margin: 0 16px;
+  }
+  .desc_paragraph {
+    font-size: 16px;
+    padding: 24px 5px;
+    margin: 50px 0;
+  }
+}
